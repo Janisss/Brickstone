@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Oswald:500");
+body {
+}
+nav {
+  width: 100%;
+  position: fixed;
+  top: 1.8vw;
+  text-align: center;
+  z-index: 2;
+}
+
+nav a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  font-size: 2.3vw;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  transition: color 0.5s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+nav a:hover{
+	color: #f7f6f4;
+	text-decoration: none;
+}
+
+nav a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: white;
+  top: 49%;
+  animation: out 0.5s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+nav a:hover:before {
+  animation: in 0.5s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+@keyframes in {
+  0% {
+    width: 0;
+    left: -10%;
+    right: auto;
+  }
+  100% {
+    left: -10%;
+    right: auto;
+    width: 120%;
+  }
+}
+@keyframes out {
+  0% {
+    width: 120%;
+    left: -10%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    left: -10%;
+    right: 0;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+nav a:nth-child(1) {
+  animation: show 0.2s 1.1s ease 1 both;
+}
+
+nav a:nth-child(2) {
+  animation: show 0.2s 1.2s ease 1 both;
+}
+
+nav a:nth-child(3) {
+  animation: show 0.2s 1.3s ease 1 both;
+}
+
+nav a:nth-child(4) {
+  animation: show 0.2s 1.4s ease 1 both;
+}
+
+nav a:nth-child(5) {
+  animation: show 0.2s 1.5s ease 1 both;
+}
+#video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0; 
+  top:0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+.gradient{
+  background-image: url(./gradient.png); 
+}
